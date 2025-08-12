@@ -4,19 +4,21 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hundeide Maskinutleie – Minigraver 1 tonn</title>
+  <meta name="description" content="Lei 1 tonns minigraver med førerhus i Hønefoss og omegn. Døgn, helg og ukepriser. Ekstrautstyr og tilkjøring.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
+
+<header class="site-header" role="banner">
   <div class="wrap">
-    <div class="brand">
-      <img src="logo.png" alt="Hundeide Maskinutleie" onerror="this.style.display='none'">
+    <a href="#top" class="brand" aria-label="Hundeide Maskinutleie – til forsiden">
+      <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie logo" class="logo">
       <div>
         <h1>Hundeide Maskinutleie</h1>
         <p>1 tonns minigraver med førerhus – Hønefoss og omegn</p>
       </div>
-    </div>
-    <nav>
+    </a>
+    <nav aria-label="Hovedmeny">
       <a href="#priser">Priser</a>
       <a href="#utstyr">Ekstrautstyr</a>
       <a href="#bestill" class="btn">Bestill</a>
@@ -24,9 +26,9 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
+<main id="top">
+  <section class="hero hero--noimg">
+    <div class="wrap">
       <h2>Lei minigraver – klar til jobb</h2>
       <p>Kompakt, enkel å bruke og komfortabel i all slags vær. Perfekt til hage, drenering, grøfter og små grunnarbeid.</p>
       <div class="cta">
@@ -34,95 +36,105 @@
         <a class="btn ghost" href="#priser">Se priser</a>
       </div>
     </div>
-    <div>
-      <img src="minigraver_cabin.jpg" alt="1 tonns minigraver med førerhus" onerror="this.style.display='none'">
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="priser" class="section">
-  <div class="wrap">
-    <h3>Priser</h3>
-    <div class="cards">
-      <div class="card"><h4>Døgn</h4><p class="price">1 500 kr</p><p class="meta">08:00 – 08:00</p></div>
-      <div class="card"><h4>Helg</h4><p class="price">3 000 kr</p><p class="meta">Fre 16:00 – Man 08:00</p></div>
-      <div class="card"><h4>Uke</h4><p class="price">6 500 kr</p><p class="meta">Man 08:00 – Man 08:00</p></div>
-    </div>
-    <p class="note"><strong>Transport:</strong> Tilkjøring/henting 1 000 kr innen 20 km fra Hønefoss (utover etter avtale).</p>
-    <p class="note"><strong>Rengjøring:</strong> Returneres ren, ellers rengjøringsgebyr 750 kr.</p>
-  </div>
-</section>
-
-<section id="utstyr" class="section">
-  <div class="wrap">
-    <h3>Ekstrautstyr (pris pr. døgn)</h3>
-    <ul class="list">
-      <li><span>20 cm smalskuff m/tenner</span><strong>150 kr</strong></li>
-      <li><span>43 cm gravskuff</span><strong>inkludert</strong></li>
-      <li><span>60 cm gravskuff</span><strong>200 kr</strong></li>
-      <li><span>100 cm pusseskuff (tannløs)</span><strong>200 kr</strong></li>
-      <li><span>Ripper / scarifier</span><strong>150 kr</strong></li>
-      <li><span>Mekanisk hurtigfeste</span><strong>100 kr</strong></li>
-      <li><span>Hydraulisk tommel</span><strong>200 kr</strong></li>
-      <li><span>Jordbor 200 mm</span><strong>400 kr</strong></li>
-    </ul>
-  </div>
-</section>
-
-<section id="bestill" class="section">
-  <div class="wrap">
-    <h3>Bestill minigraver</h3>
-    <p>Fyll inn skjemaet – vi bekrefter på SMS/e‑post. Du kan også ringe <a href="tel:+4792098742">920 98 742</a> eller skrive til <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a>.</p>
-
-    <!-- Netlify Forms -->
-    <form name="bestilling" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk.html" class="form">
-      <input type="hidden" name="form-name" value="bestilling">
-      <p class="hidden"><label>Ikke fyll ut: <input name="bot-field"></label></p>
-
-      <div class="grid">
-        <label>Navn* <input type="text" name="Navn" required></label>
-        <label>Telefon* <input type="tel" name="Telefon" required></label>
-        <label>E‑post <input type="email" name="Epost"></label>
-        <label>Dato (fra–til)* <input type="text" name="Dato" placeholder="f.eks. 12.–14. okt" required></label>
+  <section id="priser" class="section" aria-labelledby="priser-tittel">
+    <div class="wrap">
+      <h3 id="priser-tittel">Priser</h3>
+      <div class="cards">
+        <article class="card" aria-label="Dagsleie">
+          <h4>Døgn</h4>
+          <p class="price">1 500 kr</p>
+          <p class="meta">08:00 – 08:00</p>
+        </article>
+        <article class="card" aria-label="Helgeleie">
+          <h4>Helg</h4>
+          <p class="price">3 000 kr</p>
+          <p class="meta">Fre 16:00 – Man 08:00</p>
+        </article>
+        <article class="card" aria-label="Ukentlig leie">
+          <h4>Uke</h4>
+          <p class="price">6 500 kr</p>
+          <p class="meta">Man 08:00 – Man 08:00</p>
+        </article>
       </div>
+      <p class="note"><strong>Transport:</strong> Tilkjøring/henting 1 000 kr innen 20 km fra Hønefoss (utover etter avtale).</p>
+      <p class="note"><strong>Rengjøring:</strong> Returneres ren, ellers rengjøringsgebyr 750 kr.</p>
+    </div>
+  </section>
 
-      <label>Ekstrautstyr (hold Ctrl/⌘ for flere)
-        <select name="Ekstrautstyr" multiple>
-          <option>20 cm smalskuff m/tenner (+150)</option>
-          <option>60 cm gravskuff (+200)</option>
-          <option>100 cm pusseskuff (+200)</option>
-          <option>Ripper (+150)</option>
-          <option>Mekanisk hurtigfeste (+100)</option>
-          <option>Hydraulisk tommel (+200)</option>
-          <option>Jordbor 200 mm (+400)</option>
-        </select>
-      </label>
+  <section id="utstyr" class="section" aria-labelledby="utstyr-tittel">
+    <div class="wrap">
+      <h3 id="utstyr-tittel">Ekstrautstyr (pris pr. døgn)</h3>
+      <ul class="list">
+        <li><span>20 cm smalskuff m/tenner</span><strong>150 kr</strong></li>
+        <li><span>43 cm gravskuff</span><strong>inkludert</strong></li>
+        <li><span>60 cm gravskuff</span><strong>200 kr</strong></li>
+        <li><span>100 cm pusseskuff (tannløs)</span><strong>200 kr</strong></li>
+        <li><span>Ripper / scarifier</span><strong>150 kr</strong></li>
+        <li><span>Mekanisk hurtigfeste</span><strong>100 kr</strong></li>
+        <li><span>Hydraulisk tommel</span><strong>200 kr</strong></li>
+        <li><span>Jordbor 200 mm</span><strong>400 kr</strong></li>
+      </ul>
+    </div>
+  </section>
 
-      <div class="grid">
-        <label>Tilkjøring?
-          <select name="Tilkjøring">
-            <option>Nei</option>
-            <option>Ja – 1 000 kr (≤20 km)</option>
+  <section id="bestill" class="section" aria-labelledby="bestill-tittel">
+    <div class="wrap">
+      <h3 id="bestill-tittel">Bestill minigraver</h3>
+      <p>Fyll inn skjemaet – vi bekrefter på SMS/e‑post. Du kan også ringe <a href="tel:+4792098742">920 98 742</a> eller skrive til <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a>.</p>
+
+      <!-- Netlify Forms -->
+      <form name="bestilling" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk.html" class="form">
+        <input type="hidden" name="form-name" value="bestilling">
+        <p class="hidden"><label>Ikke fyll ut: <input name="bot-field"></label></p>
+
+        <div class="grid">
+          <label>Navn* <input type="text" name="Navn" required></label>
+          <label>Telefon* <input type="tel" name="Telefon" required></label>
+          <label>E‑post <input type="email" name="Epost"></label>
+          <label>Dato (fra–til)* <input type="text" name="Dato" placeholder="f.eks. 12.–14. okt" required></label>
+        </div>
+
+        <label>Ekstrautstyr (hold Ctrl/⌘ for flere)
+          <select name="Ekstrautstyr" multiple>
+            <option>20 cm smalskuff m/tenner (+150)</option>
+            <option>60 cm gravskuff (+200)</option>
+            <option>100 cm pusseskuff (+200)</option>
+            <option>Ripper (+150)</option>
+            <option>Mekanisk hurtigfeste (+100)</option>
+            <option>Hydraulisk tommel (+200)</option>
+            <option>Jordbor 200 mm (+400)</option>
           </select>
         </label>
-        <label>Adresse for tilkjøring <input type="text" name="Adresse"></label>
-      </div>
 
-      <label>Melding
-        <textarea name="Melding" rows="4" placeholder="Evt. detaljer (adkomst, portbredde, osv.)"></textarea>
-      </label>
+        <div class="grid">
+          <label>Tilkjøring?
+            <select name="Tilkjøring">
+              <option>Nei</option>
+              <option>Ja – 1 000 kr (≤20 km)</option>
+            </select>
+          </label>
+          <label>Adresse for tilkjøring <input type="text" name="Adresse"></label>
+        </div>
 
-      <button type="submit" class="btn full">Send forespørsel</button>
-      <p class="tiny">Ved innsending godtar du våre leievilkår.</p>
-    </form>
-  </div>
-</section>
+        <label>Melding
+          <textarea name="Melding" rows="4" placeholder="Evt. detaljer (adkomst, portbredde, osv.)"></textarea>
+        </label>
 
-<footer class="site-footer">
+        <button type="submit" class="btn full">Send forespørsel</button>
+        <p class="tiny">Ved innsending godtar du våre leievilkår.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer" role="contentinfo">
   <div class="wrap foot">
     <div><strong>Hundeide Maskinutleie</strong><br>Hønefoss og omegn</div>
     <div>📞 <a href="tel:+4792098742">920 98 742</a> · ✉️ <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a></div>
   </div>
 </footer>
+
 </body>
 </html>
