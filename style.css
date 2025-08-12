@@ -1,56 +1,103 @@
-/* Base */
-*{box-sizing:border-box} html,body{margin:0;padding:0}
-body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#ffffff;color:#1f2937;line-height:1.6}
-a{color:#0f62fe;text-decoration:none} a:hover{text-decoration:underline}
-.wrap{max-width:1100px;margin:0 auto;padding:0 18px}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
 
-/* Buttons */
-.btn{background:#0f62fe;color:#fff;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-block;border:0}
-.btn:hover{filter:brightness(.95)} .btn.ghost{background:transparent;border:2px solid #0f62fe;color:#0f62fe}
-.btn.full{width:100%}
+.header {
+  text-align: center;
+  padding: 15px;
+}
 
-/* Header med stor logo */
-.site-header{background:#f8fafc;border-bottom:1px solid #e5e7eb;padding:14px 0}
-.logo-center{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-.logo-large{max-width:260px;height:auto}
-.tagline{color:#4b5563}
-.site-header nav{display:flex;gap:18px;flex-wrap:wrap;justify-content:center}
-.site-header nav a{color:#1f2937}
+.logo-large {
+  max-width: 300px;
+  height: auto;
+}
 
-/* Hero */
-.hero{padding:42px 0;border-bottom:1px solid #e5e7eb;background:linear-gradient(180deg,#ffffff,#f8fafc)}
-.hero h1{font-size:2rem;margin:0 0 8px}
-.hero p{max-width:720px;margin:0 auto 16px;color:#4b5563}
-.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.nav {
+  background: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+}
 
-/* Sections */
-.section{padding:34px 0;border-bottom:1px solid #e5e7eb;background:#ffffff}
-.section h2{margin:0 0 14px}
+.nav a {
+  margin: 0 10px;
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* Cards/priser */
-.cards{display:grid;gap:14px;grid-template-columns:repeat(3,1fr)}
-.card{background:#ffffff;border:1px solid #e5e7eb;border-radius:12px;padding:16px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
-.price{font-size:26px;color:#0f62fe;margin:6px 0 0}
-.meta{color:#6b7280}
-.note{color:#6b7280;margin-top:10px}
+.nav a.btn {
+  background: #ffb400;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: #000;
+}
 
-/* Liste ekstrautstyr */
-.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.list li{display:flex;justify-content:space-between;border-bottom:1px dashed #e5e7eb;padding:8px 0}
+.hero {
+  text-align: center;
+  padding: 30px 15px;
+}
 
-/* Skjema */
-.form{display:grid;gap:12px;margin-top:8px}
-.grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #d1d5db;background:#fff;color:#111827}
-.hidden{display:none} .tiny{color:#6b7280;font-size:12px}
+.btn-group {
+  margin-top: 15px;
+}
 
-/* Footer */
-.site-footer{background:#f8fafc;border-top:1px solid #e5e7eb}
-.foot{display:flex;justify-content:space-between;align-items:center;padding:18px 0;color:#6b7280;flex-wrap:wrap;gap:10px}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-/* Mobil */
-@media(max-width:900px){
-  .cards{grid-template-columns:1fr}
-  .grid{grid-template-columns:1fr}
-  .logo-large{max-width:200px}
+.btn.primary {
+  background: #ffb400;
+  color: #000;
+}
+
+.btn.secondary {
+  background: #eee;
+  color: #000;
+}
+
+section {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input, textarea, select {
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+footer {
+  text-align: center;
+  background: #f5f5f5;
+  padding: 10px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .logo-large {
+    max-width: 200px;
+  }
 }
