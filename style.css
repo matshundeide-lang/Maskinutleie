@@ -112,3 +112,10 @@ input::placeholder,textarea::placeholder{color:#8190a6}
   max-width: 100%;
   overflow-wrap: anywhere;
 }
+/* Fallback: gjør evt. eksisterende tel/mail-lenker gule selv uten .pill/.footer-contact */
+.footer a[href^="tel"], .footer a[href^="mailto"] {
+  background: #ffd25a; color: #111; padding: 6px 10px; border-radius: 8px;
+  font-weight: 700; text-decoration: none; display: inline-block; line-height: 1.1;
+  white-space: nowrap; max-width: 100%; overflow-wrap: anywhere; margin-right: 12px; margin-bottom: 8px;
+}
+.footer a[href^="tel"]:hover, .footer a[href^="mailto"]:hover { filter: brightness(.95); }
