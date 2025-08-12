@@ -1,47 +1,65 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maskinutleie - Bestill</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hundeide Maskinutleie – Bestill minigraver</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="header">
+    <!-- riktig filnavn på logoen -->
+    <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie AS" class="logo-full">
+  </header>
 
-    <header>
-        <img src="Hundeeide_Maskinutleie_logo.png" alt="Logo" class="logo">
-        <h1>Maskinutleie</h1>
-    </header>
+  <main>
+    <section class="hero">
+      <h1>Bestill minigraver</h1>
+      <p>Fyll ut skjemaet under – vi bekrefter på SMS/e‑post så fort vi kan.</p>
+    </section>
 
-    <main>
-        <h2>Bestill maskin</h2>
-        <form name="bestilling" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk.html" class="form">
-            <p class="hidden">
-                <label>Ikke fyll ut dette feltet: <input name="bot-field"></label>
-            </p>
-            <label for="navn">Navn:</label>
-            <input type="text" id="navn" name="navn" required>
+    <section class="section">
+      <form name="bestilling" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk.html" class="form">
+        <!-- VIKTIG for Netlify Forms -->
+        <input type="hidden" name="form-name" value="bestilling">
+        <p class="hidden"><label>Ikke fyll ut: <input name="bot-field"></label></p>
 
-            <label for="telefon">Telefon:</label>
-            <input type="tel" id="telefon" name="telefon" required>
+        <div class="grid">
+          <label>Navn* <input type="text" name="Navn" required></label>
+          <label>Telefon* <input type="tel" name="Telefon" required></label>
+          <label>E‑post <input type="email" name="Epost" placeholder="epost@domene.no"></label>
+          <label>Dato (fra–til)* <input type="text" name="Dato" placeholder="f.eks. 12.–14. okt" required></label>
+        </div>
 
-            <label for="epost">E-post:</label>
-            <input type="email" id="epost" name="epost" required>
+        <label>Ekstrautstyr
+          <input type="text" name="Ekstrautstyr" placeholder="F.eks. 20 cm smalskuff, pusseskuff">
+        </label>
 
-            <label for="maskin">Velg maskin:</label>
-            <select id="maskin" name="maskin" required>
-                <option value="">-- Velg en maskin --</option>
-                <option value="gravemaskin">Gravemaskin</option>
-                <option value="minigraver">Minigraver</option>
-                <option value="hjullaster">Hjullaster</option>
+        <div class="grid">
+          <label>Tilkjøring
+            <select name="Tilkjøring">
+              <option>Nei</option>
+              <option>Ja – 1 000 kr (≤20 km)</option>
             </select>
+          </label>
+          <label>Adresse for tilkjøring
+            <input type="text" name="Adresse" placeholder="Gjelder kun ved tilkjøring">
+          </label>
+        </div>
 
-            <label for="dato">Dato for leie:</label>
-            <input type="date" id="dato" name="dato" required>
+        <label>Melding
+          <textarea name="Melding" rows="4" placeholder="Evt. detaljer om adkomst, portbredde osv."></textarea>
+        </label>
 
-            <button type="submit">Send bestilling</button>
-        </form>
-    </main>
+        <button type="submit" class="btn full">Send forespørsel</button>
+        <p class="tiny">Ved innsending godtar du våre leievilkår.</p>
+      </form>
+    </section>
+  </main>
 
+  <footer class="footer">
+    <p><strong>Hundeide Maskinutleie</strong> · Hønefoss og omegn</p>
+    <p>📞 <a href="tel:+4792098742">920 98 742</a> · ✉️ <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a></p>
+  </footer>
 </body>
 </html>
