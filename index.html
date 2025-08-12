@@ -1,190 +1,177 @@
 <!doctype html>
-<html lang="nb">
+<html lang="no">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hundeide Maskinutleie – Minigraver 1 tonn</title>
-  <meta name="description" content="Lei 1 tonns minigraver i Hønefoss og omegn. Enkelt, rimelig og klart til jobb." />
+  <title>Hundeide Maskinutleie – 1 tonns minigraver</title>
   <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Lei 1 tonns minigraver med førerhus i Hønefoss og omegn. Enkelt å bruke, god pris og rask levering." />
 </head>
 <body>
   <!-- Header -->
-  <header class="header">
-    <div class="container header__inner">
-      <img class="logo" src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie AS" />
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Hjem">
+        <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie AS" class="logo" />
+      </a>
       <nav class="nav">
         <a href="#priser">Priser</a>
-        <a href="#utstyr">Ekstrautstyr</a>
-        <a class="btn btn--sm" href="#bestill">Bestill</a>
+        <a href="#ekstra">Ekstrautstyr</a>
+        <a class="btn btn-primary btn-small" href="#bestill">Bestill</a>
       </nav>
     </div>
   </header>
 
-  <!-- Hero (uten tekstlista) -->
-  <section class="hero">
-    <div class="container hero__inner">
-      <h1>Lei minigraver – klar til jobb</h1>
-      <p class="lead">Kompakt, enkel å bruke og perfekt til hage, drenering, grøfter og små grunnarbeid i Hønefoss og omegn.</p>
-      <div class="hero__cta">
-        <a class="btn btn--xl" href="#bestill">Reserver nå</a>
-        <a class="btn btn--ghost btn--xl" href="#priser">Se priser</a>
-      </div>
-    </div>
-  </section>
+  <main id="top">
+    <!-- (Bevisst ingen hero – ønsket fjernet) -->
 
-  <!-- Priser -->
-  <section id="priser" class="section">
-    <div class="container">
-      <h2 class="section__title">Priser</h2>
+    <!-- Priser -->
+    <section id="priser" class="section">
+      <div class="container">
+        <h2>Priser</h2>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Døgn</h3>
-          <p class="card__price">1&nbsp;500&nbsp;kr</p>
-          <p class="muted">08:00 – 08:00</p>
-        </article>
+        <div class="cards">
+          <article class="card">
+            <h3>Døgn</h3>
+            <p class="card-price">1 500 kr</p>
+            <p class="muted">08:00 – 08:00</p>
+          </article>
 
-        <article class="card card--popular">
-          <div class="badge">Mest populær</div>
-          <h3>Helg</h3>
-          <p class="card__price">3&nbsp;000&nbsp;kr</p>
-          <p class="muted">Fre 16:00 – Man 08:00</p>
-        </article>
+          <article class="card featured">
+            <div class="badge">Mest populær</div>
+            <h3>Helg</h3>
+            <p class="card-price">3 000 kr</p>
+            <p class="muted">Fre 16:00 – Man 08:00</p>
+          </article>
 
-        <article class="card">
-          <h3>Uke</h3>
-          <p class="card__price">6&nbsp;500&nbsp;kr</p>
-          <p class="muted">Man 08:00 – Man 08:00</p>
-        </article>
-      </div>
+          <article class="card">
+            <h3>Uke</h3>
+            <p class="card-price">6 500 kr</p>
+            <p class="muted">Man 08:00 – Man 08:00</p>
+          </article>
+        </div>
 
-      <ul class="bullets">
-        <li><strong>Transport:</strong> Tilkjøring/henting <strong>1&nbsp;000&nbsp;kr</strong> innen 20&nbsp;km fra Hønefoss (utover etter avtale).</li>
-        <li><strong>Rengjøring:</strong> Returneres ren, ellers rengjøringsgebyr <strong>750&nbsp;kr</strong>.</li>
-        <li>Alle priser inkl. mva.</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Ekstrautstyr -->
-  <section id="utstyr" class="section section--alt">
-    <div class="container">
-      <h2 class="section__title">Ekstrautstyr (pris pr. døgn)</h2>
-      <div class="grid-2">
-        <ul class="list">
-          <li>20&nbsp;cm smalskuff m/tenner – <strong>150&nbsp;kr</strong></li>
-          <li>43&nbsp;cm graveskuff <em>inkludert</em></li>
-          <li>60&nbsp;cm graveskuff – <strong>200&nbsp;kr</strong></li>
-          <li>80&nbsp;cm <strong>tilt</strong> pusseskuff – <strong>200&nbsp;kr</strong></li>
-        </ul>
-        <ul class="list">
-          <li>Ripper / scarifier – <strong>150&nbsp;kr</strong></li>
-          <li>Mekanisk hurtigfeste – <strong>100&nbsp;kr</strong></li>
-          <li>Hydraulisk tommel – <strong>200&nbsp;kr</strong></li>
-          <li>Jordbor 200&nbsp;mm – <strong>400&nbsp;kr</strong></li>
+        <ul class="info-bullets">
+          <li><strong>Transport:</strong> Tilkjøring/henting 1 000 kr innen 20 km fra Hønefoss (utenfor etter avtale).</li>
+          <li><strong>Rengjøring:</strong> Returneres ren, ellers rengjøringsgebyr 750 kr.</li>
         </ul>
       </div>
+    </section>
 
-      <div class="center mt-lg">
-        <a class="btn btn--xl" href="#bestill">Reserver minigraver</a>
+    <!-- Ekstrautstyr -->
+    <section id="ekstra" class="section alt">
+      <div class="container">
+        <h2>Ekstrautstyr <span class="muted">(pris pr. døgn)</span></h2>
+
+        <div class="grid-two">
+          <ul class="bullets">
+            <li>20 cm smalskuff m/tenner – <strong>150 kr</strong></li>
+            <li>43 cm gravskuff – <strong>inkludert</strong></li>
+            <li>60 cm gravskuff – <strong>200 kr</strong></li>
+            <li>80 cm tilt-/pusseskuffe – <strong>200 kr</strong></li>
+          </ul>
+          <ul class="bullets">
+            <li>Ripper / scarifier – <strong>150 kr</strong></li>
+            <li>Mekanisk hurtigfeste – <strong>100 kr</strong></li>
+            <li>Hydraulisk tommel – <strong>200 kr</strong></li>
+            <li>Jordbor 200 mm – <strong>200 kr</strong></li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Bestill -->
-  <section id="bestill" class="section">
-    <div class="container">
-      <h2 class="section__title">Bestill minigraver</h2>
-      <p class="muted center mb-md">Fyll ut skjemaet – vi bekrefter på SMS/e‑post så fort vi kan.</p>
+    <!-- Bestillingsskjema (Netlify) -->
+    <section id="bestill" class="section">
+      <div class="container">
+        <h2>Bestill minigraver</h2>
+        <p class="lead">Fyll ut skjemaet – vi bekrefter på SMS/e‑post så fort vi kan.</p>
 
-      <form name="bestilling" method="POST" action="/takk" data-netlify="true" netlify-honeypot="bot-field" class="form">
-        <input type="hidden" name="form-name" value="bestilling" />
-        <p class="hidden"><label>Ikke fyll ut: <input name="bot-field" /></label></p>
+        <form name="bestilling" method="POST" action="/takk" netlify netlify-honeypot="bot-field" class="form">
+          <input type="hidden" name="form-name" value="bestilling" />
+          <p class="hidden">
+            <label>Ikke fyll ut: <input name="bot-field" /></label>
+          </p>
 
-        <div class="form__row">
-          <label for="navn">Navn*</label>
-          <input id="navn" name="Navn" type="text" required />
-        </div>
+          <div class="grid-two">
+            <label>
+              Navn*
+              <input type="text" name="navn" required />
+            </label>
 
-        <div class="form__row">
-          <label for="tlf">Telefon*</label>
-          <input id="tlf" name="Telefon" type="tel" inputmode="tel" required />
-        </div>
+            <label>
+              Telefon*
+              <input type="tel" name="telefon" required />
+            </label>
 
-        <div class="form__row">
-          <label for="epost">E‑post*</label>
-          <input id="epost" name="Epost" type="email" required />
-        </div>
+            <label>
+              E‑post*
+              <input type="email" name="epost" placeholder="epost@domene.no" required />
+            </label>
 
-        <div class="form__row">
-          <label for="dato">Dato (fra–til)*</label>
-          <input id="dato" name="Dato" type="text" placeholder="f.eks. 12.–14. okt" required />
-        </div>
+            <label>
+              Dato (fra–til)*
+              <input type="text" name="dato" placeholder="f.eks. 12.–14. okt" required />
+            </label>
+          </div>
 
-        <div class="form__row">
-          <label for="utstyrfelt">Ekstrautstyr (hold Ctrl/⌘ for flere)</label>
-          <select id="utstyrfelt" name="Ekstrautstyr" multiple>
-            <option>20 cm smalskuff m/tenner</option>
-            <option>43 cm graveskuff (inkludert)</option>
-            <option>60 cm graveskuff</option>
-            <option>80 cm tilt pusseskuff</option>
-            <option>Ripper / scarifier</option>
-            <option>Mekanisk hurtigfeste</option>
-            <option>Hydraulisk tommel</option>
-            <option>Jordbor 200 mm</option>
-          </select>
-        </div>
-
-        <div class="form__row">
-          <label for="tilkjoring">Tilkjøring?</label>
-          <select id="tilkjoring" name="Tilkjøring">
-            <option>Nei</option>
-            <option>Ja – innen 20 km (1 000 kr)</option>
-          </select>
-        </div>
-
-        <div class="form__row">
-          <label for="adresse">Adresse for tilkjøring</label>
-          <input id="adresse" name="Adresse" type="text" placeholder="Evt. detaljer (adkomst, portbredde osv.)" />
-        </div>
-
-        <div class="form__row">
-          <label for="melding">Melding</label>
-          <textarea id="melding" name="Melding" rows="4"></textarea>
-        </div>
-
-        <!-- Fikset sjekkboks-layout -->
-        <div class="form__row terms-check">
-          <label class="terms-label">
-            <input type="checkbox" name="Aksepter vilkår" required />
-            <span>Jeg har lest og godtar <a href="/vilkar.html" target="_blank" rel="noopener">leievilkårene</a>.</span>
+          <label>
+            Ekstrautstyr (hold Ctrl/⌘ for flere)
+            <select name="ekstrautstyr" multiple size="6">
+              <option>20 cm smalskuff m/tenner</option>
+              <option>43 cm gravskuff (inkludert)</option>
+              <option>60 cm gravskuff</option>
+              <option>80 cm tilt-/pusseskuffe</option>
+              <option>Ripper / scarifier</option>
+              <option>Mekanisk hurtigfeste</option>
+              <option>Hydraulisk tommel</option>
+              <option>Jordbor 200 mm</option>
+            </select>
           </label>
-        </div>
 
-        <div class="center mt-md">
-          <button class="btn btn--xl" type="submit">Send bestilling</button>
-        </div>
-        <p class="tiny muted center mt-sm">Ved innsending godtar du våre leievilkår.</p>
-      </form>
-    </div>
-  </section>
+          <div class="grid-two">
+            <label>
+              Tilkjøring?
+              <select name="tilkjoring">
+                <option>Nei</option>
+                <option>Ja</option>
+              </select>
+            </label>
 
-  <footer class="footer">
-    <div class="container footer__inner">
-      <div>
-        <strong>Hundeide Maskinutleie</strong><br>Hønefoss og omegn
+            <label>
+              Adresse for tilkjøring
+              <input type="text" name="adresse" placeholder="Evt. detaljer (adkomst, portbredde osv.)" />
+            </label>
+          </div>
+
+          <label>
+            Melding
+            <textarea name="melding" rows="4"></textarea>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" name="samtykke" required />
+            <span>Jeg har lest og godtar <a href="/leievilkar" target="_blank" rel="noopener">leievilkårene</a>.</span>
+          </label>
+
+          <button class="btn btn-primary btn-big" type="submit">Send bestilling</button>
+          <p class="muted tiny">Ved innsending godtar du våre leievilkår.</p>
+        </form>
       </div>
-      <div class="footer__contact">
-        <a href="tel:+4792098742">920&nbsp;98&nbsp;742</a>
-        <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Hundeide<br/>Maskinutleie</h4>
+        <p class="muted">Hønefoss og omegn</p>
+      </div>
+      <div>
+        <p><strong>920 98 742</strong><br/>
+        <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a></p>
       </div>
     </div>
   </footer>
-
-  <script>
-    const h = document.querySelector('.header');
-    const onScroll = () => h.classList.toggle('scrolled', window.scrollY > 8);
-    onScroll(); window.addEventListener('scroll', onScroll);
-  </script>
 </body>
 </html>
