@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Hundeide Maskinutleie – Minigraver 1 tonn med førerhus</title>
   <meta name="description" content="Lei 1 tonns minigraver med førerhus i Hønefoss og omegn. Enkelt, rimelig og klart til jobb." />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -33,6 +32,13 @@
         <a class="btn btn--xl" href="#bestill">Reserver nå</a>
         <a class="btn btn--ghost btn--xl" href="#priser">Se priser</a>
       </div>
+
+      <ul class="bullets">
+        <li>Førerhus med varme</li>
+        <li>Joystick‑styring (hydraulisk pilot)</li>
+        <li>43&nbsp;cm graveskuff – inkludert</li>
+        <li>Transport: tilkjøring/henting kr 1&nbsp;000 innen 20&nbsp;km</li>
+      </ul>
     </div>
   </section>
 
@@ -151,12 +157,20 @@
 
         <div class="form__row">
           <label for="adresse">Adresse for tilkjøring</label>
-          <input id="adresse" name="Adresse" type="text" placeholder="Evt. detaljer (adkomst, port/bedø, osv.)" />
+          <input id="adresse" name="Adresse" type="text" placeholder="Evt. detaljer (adkomst, portbredde osv.)" />
         </div>
 
         <div class="form__row">
           <label for="melding">Melding</label>
           <textarea id="melding" name="Melding" rows="4"></textarea>
+        </div>
+
+        <!-- Avkrysningsboks + lenke til vilkår -->
+        <div class="form__row terms-check">
+          <label>
+            <input type="checkbox" name="Aksepter vilkår" required />
+            Jeg har lest og godtar <a href="/vilkar.html" target="_blank" rel="noopener">leievilkårene</a>.
+          </label>
         </div>
 
         <div class="center mt-md">
@@ -181,5 +195,12 @@
       </div>
     </div>
   </footer>
+
+  <!-- Liten header-skygge når man scroller -->
+  <script>
+    const h = document.querySelector('.header');
+    const onScroll = () => h.classList.toggle('scrolled', window.scrollY > 8);
+    onScroll(); window.addEventListener('scroll', onScroll);
+  </script>
 </body>
 </html>
