@@ -1,158 +1,52 @@
-<!DOCTYPE html>
-<html lang="no">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hundeide Maskinutleie – Minigraver 1 tonn</title>
-  <link rel="stylesheet" href="style.css" />
+/* Reset / base */
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0f1114;color:#e9edf2;line-height:1.6}
+a{color:#ffd24d;text-decoration:none} a:hover{text-decoration:underline}
 
-  <!-- EmailJS (for sending e‑post direkte til Gmail) -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-  <script>
-    // FYLL INN DINE VERDIER FRA EMAILJS:
-    const EMAILJS_PUBLIC_KEY = "PUBLIC_KEY";
-    const EMAILJS_SERVICE_ID = "SERVICE_ID";
-    const EMAILJS_TEMPLATE_ID = "TEMPLATE_ID";
-    (function(){ try{ emailjs.init(EMAILJS_PUBLIC_KEY); }catch(e){} })();
-  </script>
-</head>
-<body>
-  <header class="header">
-    <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie AS" class="logo-full" />
-  </header>
+/* Header + logo */
+.header{background:#0a0c0f;border-bottom:1px solid #1d232b}
+.logo-full{width:100%;max-height:200px;object-fit:contain;display:block;margin:0 auto}
 
-  <main>
-    <section class="hero">
-      <h1>Lei minigraver – klar til jobb</h1>
-      <p>Kompakt, enkel å bruke og komfortabel i all slags vær. Perfekt til hage, drenering, grøfter og små grunnarbeid i Hønefoss og omegn.</p>
-      <div class="cta">
-        <a href="#bestill" class="btn">Bestill nå</a>
-        <a href="#priser" class="btn ghost">Se priser</a>
-      </div>
-    </section>
+/* Hero */
+.hero{padding:34px 18px;text-align:center;border-bottom:1px solid #1d232b;background:linear-gradient(180deg,#11161c,#0b0f13)}
+.hero h1{margin:8px 0 6px}
+.hero p{max-width:860px;margin:0 auto 14px;color:#c4cbd3}
+.hero .cta{display:flex;gap:12px;justify-content:center;margin-top:10px}
+.center{min-height:60vh;display:flex;flex-direction:column;justify-content:center}
 
-    <section id="priser" class="section">
-      <h2>Priser</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Døgn</h3>
-          <div class="price">1 500 kr</div>
-          <p>08:00 → 08:00</p>
-        </div>
-        <div class="card">
-          <h3>Helg</h3>
-          <div class="price">3 000 kr</div>
-          <p>Fre 16:00 → Man 08:00</p>
-        </div>
-        <div class="card">
-          <h3>Uke</h3>
-          <div class="price">6 500 kr</div>
-          <p>Man 08:00 → Man 08:00</p>
-        </div>
-      </div>
+/* Section */
+.section{padding:28px 18px;max-width:1100px;margin:0 auto}
+.section h2{margin:0 0 14px}
 
-      <div class="info">
-        <p><strong>Transport:</strong> Tilkjøring/henting 1 000 kr inntil 20 km fra Hønefoss (etter avtale).</p>
-        <p><strong>Rengjøring:</strong> Returneres ren, ellers rengjøringsgebyr 750 kr.</p>
-      </div>
-    </section>
+/* Cards */
+.cards{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
+.card{background:#0b1015;border:1px solid #1d232b;border-radius:14px;padding:16px;text-align:center}
+.card .price{font-size:28px;font-weight:800;margin:6px 0}
 
-    <section class="section">
-      <h2>Ekstrautstyr (pris pr. døgn)</h2>
-      <ul class="bullets">
-        <li>20 cm smalskuff m/tenner – <strong>150 kr</strong></li>
-        <li>43 cm gravskuff – <strong>inkludert</strong></li>
-        <li>60 cm gravskuff – <strong>200 kr</strong></li>
-        <li>100 cm pusseskuff (tannløs) – <strong>200 kr</strong></li>
-        <li>Ripper / scarifier – <strong>150 kr</strong></li>
-        <li>Mekanisk hurtigfeste – <strong>100 kr</strong></li>
-        <li>Hydraulisk tommel – <strong>200 kr</strong></li>
-        <li>Jordbor 200 mm – <strong>400 kr</strong></li>
-      </ul>
-    </section>
+/* Info/bullets */
+.info{margin-top:12px;color:#c4cbd3}
+.bullets{margin:0;padding-left:18px}
+.bullets li{margin:6px 0}
 
-    <section id="bestill" class="section">
-      <h2>Bestill minigraver</h2>
-      <p>Fyll ut skjemaet – vi bekrefter på SMS/e‑post.</p>
+/* Form */
+.form{display:grid;gap:12px;max-width:900px}
+.grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #26313b;background:#0c1116;color:#e9edf2}
+.hidden{display:none}
+.tiny{color:#98a4af;font-size:12px}
 
-      <!-- Netlify backup + EmailJS -->
-      <form id="bestillForm"
-            name="bestilling"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            action="/takk.html"
-            class="form">
-        <!-- Netlify krever disse to for å fange innsendelser -->
-        <input type="hidden" name="form-name" value="bestilling" />
-        <p class="hidden"><label>Ikke fyll ut: <input name="bot-field" /></label></p>
+/* Buttons */
+.btn{background:#ffd24d;color:#14161a;padding:10px 16px;border-radius:10px;font-weight:800;display:inline-block;border:0;cursor:pointer}
+.btn.ghost{background:transparent;border:1px solid #ffd24d;color:#ffd24d}
+.btn.full{width:100%}
 
-        <div class="grid">
-          <label>Navn* <input type="text" name="navn" required></label>
-          <label>Telefon* <input type="tel" name="telefon" required></label>
-          <label>E‑post <input type="email" name="epost" placeholder="epost@domene.no"></label>
-          <label>Dato (fra–til)* <input type="text" name="dato" placeholder="f.eks. 12.–14. okt" required></label>
-        </div>
+/* Footer */
+.footer{background:#0a0c0f;text-align:center;padding:18px 12px;color:#9aa5b1;border-top:1px solid #1d232b}
 
-        <label>Ekstrautstyr
-          <input type="text" name="ekstra" placeholder="F.eks. 20 cm smalskuff, pusseskuff">
-        </label>
-
-        <div class="grid">
-          <label>Tilkjøring
-            <select name="tilkjoring">
-              <option>Nei</option>
-              <option>Ja – 1 000 kr (≤20 km)</option>
-            </select>
-          </label>
-          <label>Adresse for tilkjøring
-            <input type="text" name="adresse" placeholder="Gjelder ved tilkjøring">
-          </label>
-        </div>
-
-        <label>Melding
-          <textarea name="melding" rows="4" placeholder="Evt. detaljer om adkomst, portbredde osv."></textarea>
-        </label>
-
-        <button type="submit" class="btn full">Send forespørsel</button>
-        <p class="tiny">Ved innsending godtar du våre leievilkår.</p>
-      </form>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <p><strong>Hundeide Maskinutleie</strong> · Hønefoss og omegn</p>
-    <p>📞 <a href="tel:+4792098742">920 98 742</a> · ✉️ <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a></p>
-  </footer>
-
-  <script>
-    // Sender via EmailJS, og om det feiler lar vi Netlify ta over
-    document.getElementById('bestillForm').addEventListener('submit', async function(e){
-      try {
-        // hvis EmailJS ikke er satt opp ennå, la Netlify håndtere innsendingen
-        if (!EMAILJS_PUBLIC_KEY || EMAILJS_PUBLIC_KEY === "PUBLIC_KEY") return;
-
-        e.preventDefault();
-        const form = e.target;
-        const data = {
-          navn: form.navn.value,
-          telefon: form.telefon.value,
-          epost: form.epost.value || "-",
-          dato: form.dato.value,
-          ekstra: form.ekstra.value || "-",
-          tilkjoring: form.tilkjoring.value,
-          adresse: form.adresse.value || "-",
-          melding: form.melding.value || "-"
-        };
-
-        await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, data, EMAILJS_PUBLIC_KEY);
-        window.location.href = "/takk.html";
-      } catch(err){
-        // fallback – la Netlify ta imot (action="/takk.html")
-        console.warn("EmailJS feilet, sender via Netlify i stedet:", err);
-        e.target.submit();
-      }
-    });
-  </script>
-</body>
-</html>
+/* Responsive */
+@media (max-width:900px){
+  .cards{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr}
+  .logo-full{max-height:140px}
+}
