@@ -4,43 +4,24 @@ html,body{margin:0;padding:0}
 body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:#0f1114;color:#e9edf2;line-height:1.6}
 a{color:#ffd24d;text-decoration:none} a:hover{text-decoration:underline}
 
-/* Header m/ logo i full bredde */
+/* Header + logo i full bredde */
 .header{background:#0a0c0f;border-bottom:1px solid #1d232b}
 .logo-full{width:100%;height:auto;max-height:200px;object-fit:contain;display:block}
 
-/* Top-intro/nav */
-.intro{padding:14px 18px;text-align:center}
-.topnav{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
-.topnav a{color:#e9edf2}
-.btn{background:#ffd24d;color:#14161a;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-block;border:0}
-.btn.ghost{background:transparent;border:2px solid #ffd24d;color:#ffd24d}
-.btn.full{width:100%}
+/* Hero/intro */
+.hero{padding:34px 18px;text-align:center;border-bottom:1px solid #1d232b;background:linear-gradient(180deg,#0f1318,#0b0f13)}
+.hero h1,.hero h2{margin:0 0 8px}
 
-/* Hero */
-.hero{padding:34px 18px;text-align:center;border-top:1px solid #1d232b;border-bottom:1px solid #1d232b;background:linear-gradient(180deg,#0f1318,#0b0f13)}
-.hero h2{font-size:1.6rem;margin:0 0 6px}
-.cta{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+/* Section */
+.section{padding:24px 18px}
 
-/* Sections */
-.section{padding:28px 18px;border-bottom:1px solid #1d232b}
-.section h2{margin:0 0 12px}
-
-/* Cards/priser */
-.cards{display:grid;gap:12px;grid-template-columns:repeat(3,1fr)}
-.card{background:#0e1216;border:1px solid #1f2730;border-radius:12px;padding:16px}
-.price{font-size:24px;color:#ffd24d;margin:6px 0 0}
-.meta{color:#9aa5b1}
-.note{color:#9aa5b1;margin-top:8px}
-
-/* Ekstrautstyr-liste */
-.list{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-.list li{display:flex;justify-content:space-between;border-bottom:1px dashed #25303a;padding:8px 0}
-
-/* Skjema */
+/* Form */
 .form{display:grid;gap:12px;max-width:900px;margin:0 auto}
 .grid{display:grid;gap:12px;grid-template-columns:1fr 1fr}
 input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px solid #26313b;background:#0c1116;color:#e9edf2}
 .hidden{display:none}
+.btn{background:#ffd24d;color:#14161a;padding:10px 16px;border-radius:10px;font-weight:700;display:inline-block;border:0;cursor:pointer}
+.btn.full{width:100%}
 .tiny{color:#9aa5b1;font-size:12px}
 
 /* Footer */
@@ -48,7 +29,6 @@ input,select,textarea{width:100%;padding:10px;border-radius:10px;border:1px soli
 
 /* Mobil */
 @media (max-width:900px){
-  .cards{grid-template-columns:1fr}
   .grid{grid-template-columns:1fr}
   .logo-full{max-height:140px}
 }
