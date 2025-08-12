@@ -103,11 +103,18 @@ input,select,textarea{
   border:1px solid var(--border); background:#11161a; color:var(--text);
 }
 textarea{resize:vertical}
+
+/* checkbox-linja: pakk og bryt riktig på mobil */
 .checkline{
-  display:flex; align-items:flex-start; gap:10px; margin-top:14px;
+  display:flex; gap:12px; align-items:flex-start; margin-top:14px;
+  flex-wrap:wrap;                 /* viktig: lar teksten bryte */
 }
-.checkline input{width:22px; height:22px; margin-top:2px}
-.checklabel{line-height:1.5}
+.checkline input[type=checkbox]{
+  width:22px; height:22px; flex:0 0 22px; margin-top:2px;
+}
+.checklabel{
+  flex:1 1 260px; line-height:1.5; /* gir plass og brytning */
+}
 .checklabel a{color:var(--accent)}
 
 /* ---- Footer ---- */
@@ -117,7 +124,6 @@ textarea{resize:vertical}
   display:flex; gap:32px; justify-content:space-between; flex-wrap:wrap;
 }
 .footer-contacts .accent{color:var(--accent)}
-.footer-bottom{text-align:center; color:var(--muted); font-size:12px; padding:10px 0; border-top:1px solid var(--border)}
 
 /* ---- Responsive ---- */
 @media (max-width:900px){
