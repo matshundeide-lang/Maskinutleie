@@ -82,3 +82,33 @@ input::placeholder,textarea::placeholder{color:#8190a6}
   .header__inner{gap:12px}
   .logo{width:120px}
 }
+/* --- Footer kontakt: gule "pill"-merker for telefon og e‑post --- */
+.footer { margin-top: 48px; }
+.footer .contact {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer .contact a[href^="tel"], 
+.footer .contact a[href^="mailto"] {
+  background: #ffd25a;           /* gul knapp */
+  color: #111;                    /* mørk tekst på gul */
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1.1;
+  white-space: nowrap;            /* holdes på én linje */
+}
+.footer .contact a[href^="tel"]:hover, 
+.footer .contact a[href^="mailto"]:hover {
+  filter: brightness(.95);
+}
+
+/* Hindrer at lange e‑poster “sprenger” layouten på små skjermer */
+.footer .contact a[href^="mailto"] {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
