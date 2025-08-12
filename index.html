@@ -1,88 +1,140 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hundeide Maskinutleie AS</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- HEADER -->
-  <header>
+  <header class="site-header">
     <nav class="navbar">
-      <div class="brand">
-        <img src="logo.png" alt="Hundeide Maskinutleie AS">
-      </div>
+      <a href="#" class="brand" aria-label="Hjem">
+        <!-- Viktig: riktig filnavn -->
+        <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie AS" />
+      </a>
       <ul class="nav-links">
         <li><a href="#priser">Priser</a></li>
         <li><a href="#ekstrautstyr">Ekstrautstyr</a></li>
-        <li><a href="#bestill" class="btn-primary">Bestill</a></li>
+        <li><a class="btn-primary" href="#bestill">Bestill</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- LOGO-SEKSJON (kan fjernes hvis du ikke vil ha stor logo øverst) -->
-  <section class="logo-section">
-    <img src="logo.png" alt="Hundeide Maskinutleie AS">
-  </section>
+  <main>
+    <!-- PRISER -->
+    <section id="priser" class="section">
+      <h2>Priser</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Døgn</h3>
+          <p class="card-price">1 500 kr</p>
+          <p class="small">08:00 – 08:00</p>
+        </article>
 
-  <!-- PRISER -->
-  <section id="priser">
-    <h2>Priser</h2>
-    <div class="price-card">
-      <h3>Døgn</h3>
-      <p>1 500 kr</p>
-      <p class="small-text">08:00 – 08:00</p>
-    </div>
-  </section>
+        <article class="card featured">
+          <div class="badge">Mest populær</div>
+          <h3>Helg</h3>
+          <p class="card-price">3 000 kr</p>
+          <p class="small">Fre 16:00 – Man 08:00</p>
+        </article>
 
-  <!-- BESTILLINGSFORM -->
-  <section id="bestill">
-    <form name="bestilling" method="POST" data-netlify="true" action="/takk">
-      <input type="hidden" name="form-name" value="bestilling">
-      <label for="ekstra">Ekstrautstyr (hold Ctrl/⌘ for flere)</label>
-      <select id="ekstra" name="Ekstrautstyr" multiple>
-        <option value="80cm tilt skuffe">80 cm tilt skuffe</option>
-        <option value="Smalskuffe">Smalskuffe</option>
-      </select>
+        <article class="card">
+          <h3>Uke</h3>
+          <p class="card-price">6 500 kr</p>
+          <p class="small">Man 08:00 – Man 08:00</p>
+        </article>
+      </div>
 
-      <label for="tilkjoring">Tilkjoring?</label>
-      <select id="tilkjoring" name="Tilkjoring">
-        <option>Nei</option>
-        <option>Ja</option>
-      </select>
+      <div class="notice">
+        <strong>Transport:</strong> Tilkjøring/henting i utgangspunktet 1 000 kr innen 20 km fra Hønefoss (utenfor etter avtale).<br />
+        <strong>Rengjøring:</strong> Returneres ren, ellers rengjøringsgebyr 750 kr.
+      </div>
+    </section>
 
-      <label for="adresse">Adresse for tilkjøring</label>
-      <input type="text" id="adresse" name="Adresse" placeholder="Evt. detaljer (adkomst, portbredde osv.)">
+    <!-- EKSTRAUTSTYR -->
+    <section id="ekstrautstyr" class="section">
+      <h2>Ekstrautstyr</h2>
+      <ul class="bullets">
+        <li>20 cm smalskuffe m/tenner – <strong>150 kr/døgn</strong></li>
+        <li>43 cm gravskuffe – <strong>inkludert</strong></li>
+        <li>60 cm gravskuffe – <strong>200 kr/døgn</strong></li>
+        <li>80 cm <strong>tilt</strong> pusseskuffe – <strong>200 kr/døgn</strong></li>
+        <li>Ripper / scarifier – <strong>150 kr/døgn</strong></li>
+        <li>Mekanisk hurtigfeste – <strong>100 kr/døgn</strong></li>
+        <li>Hydraulisk tommel – <strong>200 kr/døgn</strong></li>
+        <li>Jordbor 200 mm – <strong>400 kr/døgn</strong></li>
+      </ul>
+    </section>
 
-      <label for="melding">Melding</label>
-      <textarea id="melding" name="Melding"></textarea>
+    <!-- BESTILLING -->
+    <section id="bestill" class="section">
+      <h2>Bestill minigraver</h2>
 
-      <label class="checkbox-label">
-        <input type="checkbox" required>
-        Jeg har lest og godtar <a href="leievilkar.html">leievilkårene</a>.
-      </label>
+      <form name="bestilling" method="POST" data-netlify="true" action="/takk">
+        <input type="hidden" name="form-name" value="bestilling" />
 
-      <button type="submit" class="btn-primary">Send bestilling</button>
-      <p class="form-note">Ved innsending godtar du våre leievilkår.</p>
-    </form>
-  </section>
+        <label for="navn">Navn*</label>
+        <input id="navn" name="Navn" type="text" required />
+
+        <label for="telefon">Telefon*</label>
+        <input id="telefon" name="Telefon" type="tel" required />
+
+        <label for="epost">E‑post*</label>
+        <input id="epost" name="Epost" type="email" required />
+
+        <label for="dato">Dato (fra–til)*</label>
+        <input id="dato" name="Dato" type="text" placeholder="f.eks. 12.–14. okt" required />
+
+        <label for="ekstra">Ekstrautstyr (hold Ctrl/⌘ for flere)</label>
+        <select id="ekstra" name="Ekstrautstyr" multiple>
+          <option>20 cm smalskuffe m/tenner</option>
+          <option>43 cm gravskuffe (inkludert)</option>
+          <option>60 cm gravskuffe</option>
+          <option>80 cm tilt pusseskuffe</option>
+          <option>Ripper / scarifier</option>
+          <option>Mekanisk hurtigfeste</option>
+          <option>Hydraulisk tommel</option>
+          <option>Jordbor 200 mm</option>
+        </select>
+
+        <label for="tilkjoring">Tilkjøring?</label>
+        <select id="tilkjoring" name="Tilkjoring">
+          <option>Nei</option>
+          <option>Ja</option>
+        </select>
+
+        <label for="adresse">Adresse for tilkjøring</label>
+        <input id="adresse" name="Adresse for tilkjøring" type="text" placeholder="Evt. detaljer (adkomst, portbredde osv.)" />
+
+        <label for="melding">Melding</label>
+        <textarea id="melding" name="Melding" rows="4"></textarea>
+
+        <label class="checkline">
+          <input type="checkbox" required />
+          Jeg har lest og godtar <a href="leievilkar.html">leievilkårene</a>.
+        </label>
+
+        <button type="submit" class="btn-primary btn-wide">Send bestilling</button>
+        <p class="small dim">Ved innsending godtar du våre leievilkår.</p>
+      </form>
+    </section>
+  </main>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
+  <footer class="site-footer">
+    <div class="footer-grid">
       <div>
-        <strong>Hundeide Maskinutleie</strong><br>
+        <strong>Hundeide Maskinutleie</strong><br />
         Hønefoss og omegn
       </div>
-      <div>
-        <a href="tel:92098742" class="highlight">920 98 742</a><br>
-        <a href="mailto:matshundeide@gmail.com" class="highlight">matshundeide@gmail.com</a>
+      <div class="footer-contacts">
+        <a class="accent" href="tel:92098742">920 98 742</a><br />
+        <a class="accent" href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      dancing-frangollo-b9abff.netlify.app
-    </div>
+    <div class="footer-bottom">dancing-frangollo-b9abff.netlify.app</div>
   </footer>
 </body>
 </html>
