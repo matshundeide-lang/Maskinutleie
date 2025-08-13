@@ -5,33 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Leievilkår – Hundeide Maskinutleie</title>
 
-  <!-- Hovedstilark fra forsiden -->
+  <meta name="description" content="Leievilkår for utleie av 1 tonns minigraver i Hønefoss og omegn. Hundeide Maskinutleie.">
+  <link rel="canonical" href="https://minigraveren.no/vilkar">
+  <meta name="theme-color" content="#0b0f13">
+
   <link rel="stylesheet" href="style.css" />
-
-  <!-- SIDESPESIFIKKE OVERRIDER: Skjul hero/bred logo på vilkårssiden -->
-  <style>
-    /* Skjul hero-blokken (den store logoen/introen fra forsiden) */
-    .hero, .logo-full, .header-hero { display: none !important; }
-
-    /* Litt rom på toppen siden hero er skjult */
-    main.section { margin-top: 16px; }
-
-    /* Diskré side-stil for vilkårstekst */
-    .terms-wrap { max-width: 900px; margin: 0 auto; }
-    .terms-wrap h1 { margin: 0 0 12px; }
-    .terms-wrap h2 { margin-top: 24px; font-size: 20px; }
-    .terms-wrap p, .terms-wrap li { color: #cbd6e2; line-height: 1.55; }
-    .terms-wrap ul { margin: 8px 0 0; padding-left: 18px; }
-    .terms-meta { color:#9fb0bf; font-size:14px; margin-top: 12px; }
-  </style>
+  <link rel="icon" href="Hundeide_Maskinutleie_AS_logo.png">
 </head>
 <body>
 
-  <!-- Toppmeny (samme som forsiden) -->
+  <!-- Samme header som forsiden -->
   <header class="site-header">
-    <nav class="navbar">
+    <nav class="navbar container">
       <a class="brand" href="/">
-        <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie logo">
+        <img src="Hundeide_Maskinutleie_AS_logo.png" alt="Hundeide Maskinutleie logo" class="brand__logo">
       </a>
       <ul class="nav-links">
         <li><a href="/#priser">Priser</a></li>
@@ -41,12 +28,10 @@
     </nav>
   </header>
 
-  <!-- Innhold -->
   <main class="section">
-    <div class="terms-wrap">
+    <div class="container">
       <h1>Leievilkår</h1>
-      <p class="terms-meta">Gjelder utleie av 1&nbsp;tonns minigraver i Hønefoss og omegn.
-        Sist oppdatert: {{dagens dato}}.</p>
+      <p class="small dim">Gjelder utleie av 1&nbsp;tonns minigraver i Hønefoss og omegn. Sist oppdatert: {{dagens dato}}.</p>
 
       <h2>1. Leieperioder og priser</h2>
       <ul>
@@ -58,9 +43,9 @@
 
       <h2>2. Bestilling, avbestilling og endring</h2>
       <ul>
-        <li>Bestilling er bindende når den er bekreftet av utleier per SMS/e‑post.</li>
+        <li>Bestilling er bindende når den er bekreftet av utleier per SMS/e-post.</li>
         <li>Avbestilling senest 24 timer før oppstart uten gebyr. Ved senere avbestilling kan 1 døgnleie belastes.</li>
-        <li>Endringer avtales skriftlig (SMS/e‑post) og bekreftes av utleier.</li>
+        <li>Endringer avtales skriftlig (SMS/e-post) og bekreftes av utleier.</li>
       </ul>
 
       <h2>3. Henting, levering og rengjøring</h2>
@@ -86,7 +71,7 @@
 
       <h2>6. Ekstrautstyr</h2>
       <ul>
-        <li>Tilgjengelig ekstrautstyr fremgår på nettsiden (f.eks. 20 cm smalskuff, 60 cm graveskuff, 80 cm tilt‑skuffe, ripper, jordbor).</li>
+        <li>Tilgjengelig ekstrautstyr fremgår på nettsiden (f.eks. 20 cm smalskuff, 60 cm graveskuff, 80 cm tilt-skuffe, ripper, jordbor).</li>
         <li>Leietaker er ansvarlig for riktig montering/bruk der dette er aktuelt (hurtigfeste, tommel etc.).</li>
       </ul>
 
@@ -112,16 +97,16 @@
       <p>
         Hundeide Maskinutleie – Hønefoss og omegn<br>
         Telefon: <a href="tel:+4792098742">920 98 742</a> ·
-        E‑post: <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a>
+        E-post: <a href="mailto:matshundeide@gmail.com">matshundeide@gmail.com</a>
       </p>
 
-      <p class="terms-meta">Ved å bestille bekrefter du at du har lest og akseptert disse vilkårene.</p>
+      <p class="small dim">Ved å bestille bekrefter du at du har lest og akseptert disse vilkårene.</p>
     </div>
   </main>
 
-  <!-- Footer (samme stil som forsiden) -->
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-grid">
+    <div class="container footer-grid">
       <div class="footer-brand">
         <strong>Hundeide Maskinutleie</strong><br>
         Hønefoss og omegn
