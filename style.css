@@ -1,87 +1,172 @@
-/* ========== Reset & base ========== */
-* { box-sizing: border-box; }
-html,body { margin:0; padding:0; }
-body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color:#0b0f13;
-  background:#ffffff;
-  line-height:1.55;
+/* ================================
+   VARS
+================================== */
+:root{
+  --bg:#0b0f13;          /* bakgrunn */
+  --panel:#0f1217;       /* panel/sekundær */
+  --panel-2:#12171e;     /* kort */
+  --line:#1b2027;        /* border */
+  --text:#e6eef6;        /* primær tekst */
+  --muted:#9fb0bf;       /* sekundær tekst */
+
+  --brand:#ffd24d;       /* gul */
+  --brand-2:#2b69ff;     /* blå aksent (ghost) */
+
+  --radius:14px;
+  --container:1100px;
 }
-a { color:#0b5dd9; text-decoration:none; }
-a:hover { text-decoration:underline; }
-img { max-width:100%; display:block; }
 
-/* ========== Layout helpers ========== */
-.container { width:100%; max-width:1100px; margin:0 auto; padding:0 16px; }
-.section { padding:32px 0; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+img{max-width:100%;height:auto;display:block}
 
-.nowrap { white-space:nowrap; }
+body{
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+}
 
-/* ========== Header ========== */
-.site-header { background:#fff; border-bottom:1px solid #e9eef3; position:sticky; top:0; z-index:10; }
-.navbar { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:10px 0; }
-.brand__logo { width:96px; height:auto; }
-.nav-links { display:flex; gap:24px; list-style:none; margin:0; padding:0; }
-.nav-links a { color:#0b0f13; font-weight:600; }
+a{color:var(--brand);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.small{font-size:.9rem}
+.dim{color:var(--muted)}
+.nowrap{white-space:nowrap}
+
+/* Container & section */
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+.section{padding:48px 0}
+
+/* ================================
+   HEADER / NAV
+================================== */
+.site-header{
+  background:var(--panel);
+  border-bottom:1px solid var(--line);
+  position:sticky; top:0; z-index:10;
+}
+.navbar{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:10px 0;
+}
+.brand__logo{height:75px;width:auto;object-fit:contain}
+.nav-links{list-style:none;display:flex;gap:24px;margin:0;padding:0}
+.nav-links a{color:var(--text);font-weight:700}
 
 /* Buttons */
-.btn-primary, .btn-ghost {
-  display:inline-block; font-weight:700; border-radius:12px; padding:14px 20px; border:1px solid transparent;
+.btn-primary,.btn-ghost{
+  display:inline-block; font-weight:800; border-radius:12px;
+  padding:14px 20px; border:1px solid transparent;
 }
-.btn-primary { background:#ffd24d; border-color:#ffd24d; color:#0b0f13; }
-.btn-primary:hover { filter:brightness(0.95); text-decoration:none; }
-.btn-ghost { background:transparent; border-color:#2b69ff; color:#2b69ff; }
-.btn-ghost:hover { background:rgba(43,105,255,0.08); text-decoration:none; }
-.btn-wide { padding-left:26px; padding-right:26px; }
+.btn-primary{background:var(--brand);border-color:var(--brand);color:#121212}
+.btn-primary:hover{filter:brightness(.95);text-decoration:none}
+.btn-ghost{background:transparent;border-color:var(--brand-2);color:var(--brand-2)}
+.btn-ghost:hover{background:rgba(43,105,255,.12);text-decoration:none}
+.btn-wide{padding-left:26px;padding-right:26px}
 
-/* ========== Hero (mørk) ========== */
-.hero { background:#0b0f13; color:#e6eef6; padding:48px 0; }
-.hero__inner { max-width:860px; }
-.hero h1 { font-size:32px; margin:0 0 10px; }
-.lead { color:#cbd6e2; font-size:18px; margin:0 0 18px; }
-.hero__cta { display:flex; gap:12px; align-items:center; }
-
-/* ========== Cards / priser ========== */
-.cards {
-  display:grid; gap:16px;
-  grid-template-columns:1fr;
+/* ================================
+   HERO (mørk)
+================================== */
+.hero{
+  background:linear-gradient(0deg, rgba(8,11,15,.9), rgba(8,11,15,.9));
+  color:var(--text);
+  padding:64px 0;
 }
-.card {
-  background:#f7f9fb; border:1px solid #e5ebf1; border-radius:14px;
+.hero__inner{max-width:860px}
+.hero h1{margin:0 0 10px; font-size:clamp(28px,4vw+6px,44px); line-height:1.15}
+.lead{color:#cbd6e2; font-size:clamp(16px,1.2vw+12px,20px); margin:0 0 18px}
+.hero__cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+
+/* ================================
+   PRIS-KORT
+================================== */
+.cards{
+  display:grid; gap:16px; grid-template-columns:1fr;
+}
+@media (min-width: 800px){ .cards{grid-template-columns:repeat(3,1fr)} }
+
+.card{
+  background:var(--panel-2);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
   padding:18px;
+  text-align:center;
 }
-.card h3 { margin:0 0 6px; }
-.card-price { font-size:28px; font-weight:800; margin:8px 0 4px; }
-.small { color:#6c7a89; font-size:14px; }
-.featured { position:relative; border-color:#2b69ff; box-shadow:0 0 0 2px rgba(43,105,255,0.12) inset; }
-.badge {
-  position:absolute; top:10px; right:10px;
-  background:#2b69ff; color:#fff; font-size:12px; padding:4px 8px; border-radius:999px;
+.card h3{margin:0 0 6px}
+.card-price{font-size:28px;font-weight:900;margin:8px 0 4px}
+.card .small{color:var(--muted)}
+.card.featured{border-color:var(--brand-2); box-shadow:0 0 0 2px rgba(43,105,255,.18) inset}
+.badge{
+  display:inline-block; background:var(--brand-2); color:#fff;
+  padding:4px 8px; border-radius:999px; font-size:12px; margin-bottom:10px;
 }
 
-/* ========== Bullets (ekstrautstyr) ========== */
-.bullets { margin:8px 0 0; padding-left:18px; }
-.bullets li { margin:8px 0; }
-
-/* ========== Form ========== */
-form { background:#0f1217; color:#e6eef6; border:1px solid #1b2027; border-radius:16px; padding:18px; }
-form label { display:block; margin:12px 0; }
-input, select, textarea {
-  width:100%; padding:12px 14px; border-radius:10px;
-  border:1px solid #2a313b; background:#0b0f13; color:#e6eef6;
+/* Notice */
+.notice{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:14px 16px;
+  color:var(--text);
 }
-select[multiple] { min-height:48px; }
-.checkline { display:flex; align-items:center; gap:10px; margin:14px 0 6px; }
-.checklabel a { color:#ffd24d; font-weight:700; }
-.dim { color:#9fb0bf; }
 
-/* ========== Footer ========== */
-.site-footer { border-top:1px solid #e9eef3; background:#fff; }
-.footer-grid { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; padding:18px 0; }
-.footer-contacts .accent { color:#d4a600; font-weight:700; }
+/* ================================
+   EKSTRAUTSTYR
+================================== */
+.bullets{margin:8px 0 0; padding-left:18px}
+.bullets li{margin:8px 0}
 
-/* ========== Responsive ========== */
-@media (min-width: 800px){
-  .hero h1 { font-size:40px; }
-  .cards { grid-template-columns: repeat(3, 1fr); }
+/* ================================
+   SKJEMA (Netlify)
+================================== */
+form{
+  background:var(--panel);
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  max-width:720px;
+}
+form label{display:block;margin:12px 0;font-weight:600}
+input,select,textarea{
+  width:100%;
+  padding:12px 14px;
+  border-radius:10px;
+  border:1px solid #2a313b;
+  background:#0b0f13;
+  color:var(--text);
+  outline:none;
+  transition:border-color .12s ease, box-shadow .12s ease;
+}
+input:focus,select:focus,textarea:focus{
+  border-color:#2b69ff;
+  box-shadow:0 0 0 3px rgba(43,105,255,.18);
+}
+select[multiple]{min-height:48px}
+textarea{min-height:140px;resize:vertical}
+
+.checkline{display:flex;align-items:flex-start;gap:10px;margin:14px 0 6px}
+.checkline input[type="checkbox"]{width:20px;height:20px;margin-top:2px}
+.checklabel a{color:var(--brand); font-weight:800}
+
+/* ================================
+   FOOTER
+================================== */
+.site-footer{
+  background:var(--panel);
+  border-top:1px solid var(--line);
+  color:var(--text);
+}
+.footer-grid{
+  display:flex; align-items:flex-start; justify-content:space-between;
+  gap:24px; padding:18px 0;
+}
+.footer-contacts .accent{color:var(--brand); font-weight:800; text-decoration:none}
+.footer-contacts .accent:hover{text-decoration:underline}
+
+/* ================================
+   RESPONSIVE
+================================== */
+@media (max-width:720px){
+  .nav-links{display:flex} /* behold synlig på mobil */
 }
